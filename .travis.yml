@@ -1,18 +1,11 @@
 language: java
 jdk: oraclejdk8
-
-branches:
-  only:
-    - vending-machine-api
 script:
   - ./mvnw clean install -B
 before_install:
   - chmod +x mvnw
 deploy:
   provider: heroku
-  skip_cleanup: true
   api-key:
    secure: $HEROKU_API_KEY
   app: vendinspr
-  on:
-   branch: vending-machine-api
