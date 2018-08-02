@@ -2,7 +2,6 @@ language: java
 jdk: oraclejdk8
 script:
   - ./mvnw clean install -B
-  - ./mvnw spring-boot:run -B
 before_install:
   - chmod +x mvnw
 deploy:
